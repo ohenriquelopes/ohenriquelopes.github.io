@@ -5,44 +5,44 @@
 ```Markdown
 - docker run --rm --name=nginx -p 8080:80 nginx
 
-_--rm (The options tells command to remove the container when it exists automatically)_
-_--name (Attribute allows you to assign a container name)_
-_-p_ ([host_ip]:[host_port]:[container_port])host_ip element is optional and you don't need to specify it when running the command.
+--rm (The options tells command to remove the container when it exists automatically)
+--name (Attribute allows you to assign a container name)
+-p ([hostip]:[hostport]:[containerport])hostip element is optional and you don't need to specify it when running the command.
 For example, to map TCP port 80 in the container to port 8080 on the Docker host you would run: 8080:80
-_-v [/host/volume/location]:[/container/storage]_
+-v [/host/volume/location]:[/container/storage]
 ```
 
 ### Docker commands
 
 ``` Markdown
 docker exec -it nginx bash
-docker run -d ubuntu _run ubuntu in detach_
-docker build <image> _build an image from a docker file_
+docker run -d ubuntu run ubuntu in detach
+docker build <image> build an image from a docker file
 docker build -t usernamedockerhub/nome:versão local(.)
 docker build -t henriquelopes52/nginx-hl:latest .
-docker rmi <image> _remove docker image_
-docker rm <container_id> _Remove container_
-docker pull _pull an image or a repository from a reistry_
-docker push  _pushes an image or a repository to a registry_
-docker exec _Runs a command in a run-time container_
-docker ps  _Show running containers_
-docker ps -a _Show all containers_
-docker search _Searches the docker hub for images_
-docker container prune _Remove all containers_
-docker stop -t 0 $(docker ps -q) _Stop all containers_
-docker network ls _List networks created_
+docker rmi <image> remove docker image
+docker rm <containerid> Remove container
+docker pull pull an image or a repository from a reistry
+docker push  pushes an image or a repository to a registry
+docker exec Runs a command in a run-time container
+docker ps  Show running containers
+docker ps -a Show all containers
+docker search Searches the docker hub for images
+docker container prune Remove all containers
+docker stop -t 0 $(docker ps -q) Stop all containers
+docker network ls List networks created
 ```
 
-
 ## Dockerfile
+
 ``` Markdown
 FROM nginx:latest
-_FROM image:version_
+FROM image:version
 COPY index.html /usr/share/nginx/html/
-_Copia os arquivos index.html para a pasta /html do container_
+Copia os arquivos index.html para a pasta /html do container
 
 RUN apt-get update && apt-get install -y vim
-_Atualiza os pacotes e instala o VIM_
+Atualiza os pacotes e instala o VIM
 
 
 ```
@@ -51,7 +51,7 @@ _Atualiza os pacotes e instala o VIM_
 
 ``` Markdown
 docker-compose up -d
-_Sobe o container em modo detach_
+Sobe o container em modo detach
 ```
 
 ```Markdown
