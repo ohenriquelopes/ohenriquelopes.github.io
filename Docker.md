@@ -55,11 +55,38 @@ Sobe o container em modo detach
 ```
 
 ```Markdown
+//versao do compose
 version: '3'
+    //nome do 'objeto'
     nginx: 
+    
         image: henriquelopes52/nginx-hl:latest
         ports:
             - "8080:80"
         volumes:
             - ./nginx/html:/usr/share/nginx/html
+
+    mysql:
+        image: mysql:5.7
+        ports:
+            - "3306:3306"
+        environment:
+            //variavel de ambiente
+            - MYSQL_ROOT_PASSWORD=root
+            //base de dados
+            - MYSQL_DATABASE=test
+        volumes:
+            - ./data:/var/lib/mysql
+
+    rabbitmq:
+        image: rabbitmq:3-management
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        environment:
+            - RABBITMQ_DEFAULT_USER=admin
+            - RABBITMQ_DEFAULT_PASS=admin
+            - RABBITMQ_DEFAULT_VHOST=test
+        volumes:
+            - ./data-rabbit:var/lib/rabbitmq
 ```
