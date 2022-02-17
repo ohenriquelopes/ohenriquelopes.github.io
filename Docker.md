@@ -16,16 +16,16 @@ _-v [/host/volume/location]:[/container/storage]_
 
 ### Docker commands
 
-```
+```Markdown
 docker exec -it nginx bash
 docker run -d ubuntu _run ubuntu in detach_
-docker build <image> **build an image from a docker file**
+docker build <image> _build an image from a docker file_
 docker rmi <image> _remove docker image_
-docker rm <container_id> remove container
+docker rm <container_id> _Remove container_
 docker pull _pull an image or a repository from a reistry_
-docker push - pushes an image or a repository to a registry
+docker push  _pushes an image or a repository to a registry_
 docker exec _Runs a command in a run-time container_
-docker ps - _Show running containers_
+docker ps  _Show running containers_
 docker ps -a _Show all containers_
 docker search _Searches the docker hub for images_
 docker container prune _Remove all containers_
@@ -35,8 +35,9 @@ docker network ls _List networks created_
 
 
 ## Dockerfile
-```
-
+```Markdown
+FROM nginx:latest
+_FROM image:versão_
 ```
 
 ## Docker-compose
