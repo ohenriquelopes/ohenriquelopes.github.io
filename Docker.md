@@ -12,14 +12,14 @@ For example, to map TCP port 80 in the container to port 8080 on the Docker host
 _-v [/host/volume/location]:[/container/storage]_
 ```
 
-
-
 ### Docker commands
 
-```Markdown
+``` Markdown
 docker exec -it nginx bash
 docker run -d ubuntu _run ubuntu in detach_
 docker build <image> _build an image from a docker file_
+docker build -t usernamedockerhub/nome:versão local(.)
+docker build -t henriquelopes52/nginx-hl:latest .
 docker rmi <image> _remove docker image_
 docker rm <container_id> _Remove container_
 docker pull _pull an image or a repository from a reistry_
@@ -35,12 +35,31 @@ docker network ls _List networks created_
 
 
 ## Dockerfile
-```Markdown
+``` Markdown
 FROM nginx:latest
-_FROM image:versão_
+_FROM image:version_
+COPY index.html /usr/share/nginx/html/
+_Copia os arquivos index.html para a pasta /html do container_
+
+RUN apt-get update && apt-get install -y vim
+_Atualiza os pacotes e instala o VIM_
+
+
 ```
 
 ## Docker-compose
+
+``` Markdown
+docker-compose up -d
+_Sobe o container em modo detach_
 ```
 
+```Markdown
+version: '3'
+    nginx: 
+        image: henriquelopes52/nginx-hl:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - ./nginx/html:/usr/share/nginx/html
 ```
