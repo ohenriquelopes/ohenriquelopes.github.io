@@ -19,3 +19,14 @@ _-v [/host/volume/location]:[/container/storage]_
 ```
 docker exec -it nginx bash
 ```
+
+
+## Dockerfile
+```
+
+```
+
+## Docker-compose
+```
+
+```
