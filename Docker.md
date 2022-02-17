@@ -1,4 +1,4 @@
-#Docker CLI
+# Docker CLI
 
 ### Docker run
 
@@ -14,10 +14,23 @@ _-v [/host/volume/location]:[/container/storage]_
 
 
 
-### Docker exec
+### Docker commands
 
 ```
 docker exec -it nginx bash
+docker run -d ubuntu _run ubuntu in detach_
+docker build <image> **build an image from a docker file**
+docker rmi <image> _remove docker image_
+docker rm <container_id> remove container
+docker pull _pull an image or a repository from a reistry_
+docker push - pushes an image or a repository to a registry
+docker exec _Runs a command in a run-time container_
+docker ps - _Show running containers_
+docker ps -a _Show all containers_
+docker search _Searches the docker hub for images_
+docker container prune _Remove all containers_
+docker stop -t 0 $(docker ps -q) _Stop all containers_
+docker network ls _List networks created_
 ```
 
 
