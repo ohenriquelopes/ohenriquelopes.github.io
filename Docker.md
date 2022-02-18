@@ -48,9 +48,16 @@ Copia os arquivos index.html para a pasta /html do container
 RUN apt-get update && apt-get install -y vim
 Atualiza os pacotes e instala o VIM
 
-WORKDIR 
+WORKDIR /path/to/workdir
+
+
 
 ADD and COPY
+
+ADD or COPY hello* /destination-dir/
+Add multiple files with name starting with hello
+
+
 
 |                                   | Docker Copy | Docker add |
 |-----------------------------------|-------------|------------|
@@ -71,6 +78,10 @@ O resultado vai ser ola
 ENTRYPOINT ["echo", "hello"]
 O Entrypoint é fixo, se executar o mesmo comando de cima, ele retornar hello ola
 
+ENV <key>=<value>
+ENV MY_NAME="Henrique"
+ENV MY_DOG="Rez \ the\ Dog
+The instruction sets the environment variable to the value.
 
 ```
 
