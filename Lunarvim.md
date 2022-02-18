@@ -66,3 +66,28 @@
 - u - undo 
 - CTRL R - Redo
 ```
+
+```Markdown
+## Find and Search
+- /
+- n - Next
+- N - Previous
+```
+
+```Markdown
+## Numeros importar para comandos
+
+5dd - Deleta 5 linhas
+```
+
+```Markdown
+## Modo visual
+- v - Entra no modo visual
+- CTRL V - Entra no modo visual de bloco
+- Sinal maior - Identar
+```
+
+```Markdown
+## dor command
+.repetição
+```
