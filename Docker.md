@@ -130,3 +130,26 @@ version: '3'
         volumes:
             - ./data-rabbit:var/lib/rabbitmq
 ```
+
+```markdown
+- context: (Compose uses an alternate file to build with. A build path must alse be specifed)
+    build:
+        context: .
+        dockerfile: dockerfile-altenate
+
+- network: (Set thw network containers connect to for the RUN instructions during build)
+    build:
+        context: .
+        network: host
+
+    build:
+        context: .
+        network: custom_network_1
+
+    build:
+        context: .
+        network: none
+
+
+
+```
