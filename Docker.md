@@ -150,6 +150,12 @@ version: '3'
         context: .
         network: none
 
+- shm_size ()
+    build:
+        context: .
+        shm_size: '2gb'
 
-
+    build:
+        context: .
+        shm_size: 10000000
 ```
