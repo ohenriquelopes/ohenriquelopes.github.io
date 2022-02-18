@@ -47,7 +47,15 @@ Atualiza os pacotes e instala o VIM
 
 WORKDIR 
 
-ADD
+ADD and COPY
+
+|                                   | Docker Copy | Docker add |
+|-----------------------------------|-------------|------------|
+| Is command syntax same            | YES         | YES        |
+| Copy multiple files               | YES         | YES        |
+| Copy multiples files in one layer | YES         | YES        |
+| Copy files from URL               | NO          | YES        |
+| Copy archive file (.gz, .tar)     | NO          | YES        |
 
 EXPOSE 80/tcp
 EXPOSE 80/udp
