@@ -17,3 +17,27 @@
 
 - Esc (escape)
 ```
+
+```Markdown
+##Navegação
+
+- b - Voltar palavras
+- w - Avançar palavras
+- B - Voltar palavras (desconsidera caracter especial)
+- W - Avançar palavras (desconsidera caracter especial)
+- e - Avançar palavras (Para no fim)
+- E - Avançar palavras (Para no fim e desconsidera caracter especial)
+- g - general (#procurar depois)
+- gg - Primeira linha do arquivo
+- G - Úiltima linha do arquivo
+- 4g - Pula 4 linhas para baixo
+- $ - Final da linha
+- 0 - Começo da linha
+- Shift A - Final da linha inserindo
+- Shift I - Comeco da linha inserindo
+- H - Esquerda
+- J - Cima
+- K - Baixo
+- L - Direita
+- Shift +)}] - Navegar pelos blocos de código
+```
