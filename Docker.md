@@ -10,7 +10,8 @@ container when it exists automatically)
 --name (Attribute allows you to assign a container name)
 -p ([hostip]:[hostport]:[containerport])hostip element is optional 
 and you don't need to specify it when running the command.
-For example, to map TCP port 80 in the container to port 8080 on the Docker host you would run: 8080:80
+For example, to map TCP port 80 in the container to port 8080 
+on the Docker host you would run: 8080:80
 -v [/host/volume/location]:[/container/storage]
 ```
 
