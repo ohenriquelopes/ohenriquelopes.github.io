@@ -19,7 +19,7 @@
 ```
 
 ```Markdown
-##Navegação
+## Navegação
 
 - b - Voltar palavras
 - w - Avançar palavras
@@ -40,4 +40,29 @@
 - K - Baixo
 - L - Direita
 - Shift +)}] - Navegar pelos blocos de código
+```
+
+```Markdown
+## Changes C,D (Esperam algum evento a seguir)
+
+- c - Troca e já entra
+- cj - Troca abaixo
+- cb - Troca comeco da palavra
+- cc - Troca toda a linha atual
+- 4cc - Troca toda as 4 linhas 
+- caw - Troca toda palavra
+- Shift C - Apaga tudo daqui pra frente
+- ci - Muda dentro 
+- cat - Muda toda tag
+- di" - Deleta dentro "
+- a -all | i-in | t-til | f-find forwar | F-find backward
+- d - Delete
+- x - Delete chat
+- r - Replace letter
+- R - Igual tecla insert
+- p - Put como append (a)
+- P - Put (colar)
+- y - yank (copiar)
+- u - undo 
+- CTRL R - Redo
 ```
