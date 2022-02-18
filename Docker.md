@@ -27,6 +27,7 @@ docker push  pushes an image or a repository to a registry
 docker exec Runs a command in a run-time container
 docker ps  Show running containers
 docker ps -a Show all containers
+docker ps -q Only display containers IDs
 docker search Searches the docker hub for images
 docker container prune Remove all containers
 docker stop -t 0 $(docker ps -q) Stop all containers
@@ -44,6 +45,21 @@ Copia os arquivos index.html para a pasta /html do container
 RUN apt-get update && apt-get install -y vim
 Atualiza os pacotes e instala o VIM
 
+WORKDIR 
+
+ADD
+
+EXPOSE 80/tcp
+EXPOSE 80/udp
+By default, expose assumes TCP, You can also specify UDP
+
+CMD ["echo", "hello"]
+O CMD pode ser substituido se você rodar algo na linha do docker run, ex:. docker run --rm henrique/hello ola
+O resultado vai ser ola
+
+ENTRYPOINT ["echo", "hello"]
+O Entrypoint é fixo, se executar o mesmo comando de cima, ele retornar hello ola
+
 
 ```
 
@@ -52,6 +68,8 @@ Atualiza os pacotes e instala o VIM
 ``` Markdown
 docker-compose up -d
 Sobe o container em modo detach
+docker-compose down
+Destroi todos os containers listados no compose
 ```
 
 ```Markdown
